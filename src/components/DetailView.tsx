@@ -13,6 +13,7 @@ import briingSS3 from '../assets/WhatsApp Image 2026-07-31 at 11.48.47.jpeg';
 import briingSS4 from '../assets/WhatsApp Image 2026-07-31 at 11.48.47 (1).jpeg';
 import briingSS5 from '../assets/WhatsApp Image 2026-07-31 at 11.48.48.jpeg';
 import briingSS6 from '../assets/WhatsApp Image 2026-07-31 at 11.48.48 (2).jpeg';
+import cvPDF from '../assets/PraiseChitumbaCV.pdf';
 
 export interface DetailItem {
   id: string;
@@ -280,6 +281,33 @@ export const DetailView: React.FC<DetailViewProps> = ({
                         <span className="pill express">Twilio SDK</span>
                         <span className="pill ts">Deno Edge</span>
                       </div>
+                    </div>
+                  </div>
+
+                  <div className="profile-cv-shelf">
+                    <div className="cv-banner">
+                      <div className="cv-icon">📄</div>
+                      <div className="cv-text">
+                        <h4>CURRICULUM VITAE (TECHNICAL DOSSIER)</h4>
+                        <p>View or download Praise's complete engineering resume for offline archiving.</p>
+                      </div>
+                    </div>
+                    <div className="cv-actions-row">
+                      <a href={cvPDF} target="_blank" rel="noopener noreferrer" className="ps5-primary-btn active cv-btn" onClick={playSelect}>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px', verticalAlign: 'middle' }}>
+                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                          <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <span>VIEW CV</span>
+                      </a>
+                      <a href={cvPDF} download="PraiseChitumbaCV.pdf" className="ps5-secondary-btn cv-btn" onClick={playSelect}>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px', verticalAlign: 'middle' }}>
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                          <polyline points="7 10 12 15 17 10"></polyline>
+                          <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>DOWNLOAD CV (PDF)</span>
+                      </a>
                     </div>
                   </div>
 

@@ -1743,6 +1743,72 @@
   text-decoration: underline;
 }
 
+/* Profile CV Shelf styling */
+.profile-cv-shelf {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.ps5-os-root.light-theme .profile-cv-shelf {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.cv-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.cv-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.cv-text h4 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: var(--ps5-light-blue);
+  font-weight: bold;
+}
+
+.cv-text p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--ps5-text-dim);
+}
+
+.ps5-os-root.light-theme .cv-text p {
+  color: #475569;
+}
+
+.cv-actions-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.cv-btn {
+  font-size: 12.5px !important;
+  padding: 10px 20px !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+  transition: transform 0.2s, background 0.3s, border-color 0.3s !important;
+}
+
+.cv-btn:hover {
+  transform: translateY(-2px);
+}
+
 /* Home Contact Metadata Row styling */
 .home-contact-row {
   display: flex;
