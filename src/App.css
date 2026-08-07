@@ -915,6 +915,26 @@
 .banner-logo {
   font-size: 32px;
 }
+.visit-website-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #ffffff, #d9d9d9);
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}
+
+.visit-website-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+  background: #fff;
+}
 
 .banner-text h3 {
   margin: 0 0 4px;

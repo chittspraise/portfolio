@@ -5,8 +5,8 @@ import eshopSS3 from '../assets/WhatsApp Image 2026-07-31 at 10.19.35 (1).jpeg';
 import eshopSS4 from '../assets/WhatsApp Image 2026-07-31 at 10.19.35 (2).jpeg';
 import eshopSS5 from '../assets/WhatsApp Image 2026-07-31 at 10.19.35 (3).jpeg';
 import eshopSS6 from '../assets/WhatsApp Image 2026-07-31 at 10.19.36.jpeg';
-import adminSS1 from '../assets/Screenshot 2026-07-31 112057.png';
-import adminSS2 from '../assets/Screenshot 2026-07-31 112305.png';
+import adminSS1 from '../assets/Screenshot 2026-08-07 000806.png';
+import adminSS2 from '../assets/Screenshot 2026-08-07 000835.png';
 import briingSS1 from '../assets/WhatsApp Image 2026-07-31 at 11.48.46.jpeg';
 import briingSS2 from '../assets/WhatsApp Image 2026-07-31 at 11.48.46 (1).jpeg';
 import briingSS3 from '../assets/WhatsApp Image 2026-07-31 at 11.48.47.jpeg';
@@ -500,7 +500,22 @@ export const DetailView: React.FC<DetailViewProps> = ({
                         </div>
                       </div>
                     </div>
-
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    margin: "24px 0 32px",
+  }}
+>
+  <a
+    href="https://eshopadmin-zeta.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="visit-website-btn"
+  >
+    🌐 Visit Website
+  </a>
+</div>
                     <div className="showcase-info full-width-info">
                       <h3>📈 eshop-admin Control Center</h3>
                       <p className="spacious-desc">The administrative console managing stock thresholds, products cataloguing, and processing analytical telemetry for the eshop platform.</p>

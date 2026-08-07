@@ -1,0 +1,150 @@
+\documentclass[10pt]{article}
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+\hypersetup{
+    pdfauthor={Praise Chitumba},
+    pdftitle={Praise Chitumba - Resume},
+    colorlinks=true,
+    urlcolor=Maroon
+}
+
+\definecolor{primary}{RGB}{92, 18, 30} % Deep maroon/burgundy
+\definecolor{tagbg}{RGB}{245, 245, 245}
+\definecolor{tagborder}{RGB}{220, 220, 220}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\pagestyle{empty}
+
+% Custom tag command for skills/expertise
+\newcommand{\skilltag}[1]{%
+  \tikz[baseline=(current bounding box.base)]
+    \node[anchor=base, draw=tagborder, fill=tagbg, rounded corners=3pt, inner xsep=6pt, inner ysep=3pt, font=\small\sffamily] {#1};%
+}
+
+\begin{document}
+
+\color{Charcoal}
+
+\begin{minipage}[t]{0.65\textwidth}
+    {\Huge \textbf{\color{primary} PRAISE CHITUMBA}}\\[6pt]
+    {\large \textbf{\color{primary} Full Stack Software Engineer}}\\[8pt]
+    \small
+    \href{mailto:praizechitts@gmail.com}{\faEnvelope\ \textcolor{primary}{praizechitts@gmail.com}} \quad
+    \href{https://qflit.com}{\faGlobe\ \textcolor{primary}{qflit.com}} \quad
+    {\faPhone\ +27 78 985 7143} \quad
+    {\faMapMarker* {Midrand \& Cape Town}} \quad
+    \href{https://linkedin.com/in/praise-chitumba-097a23409}{\faLinkedin\ praise-chitumba-097a23409} \quad
+    \href{https://github.com/chittspraise}{\faGithub\ chittspraise}
+\end{minipage}
+
+\vspace{0.5em}
+\hdashrule{\textwidth}{0.5pt}{1pt}
+\vspace{-0.5em}
+
+\begin{multicols}{2}
+
+% --- LEFT COLUMN ---
+\section*{\color{primary}\normalsize PROFILE}
+\vspace{-0.8em}
+{\small Results-driven Full Stack Software Engineer with a proven track record of designing, building, and delivering production-ready web and mobile applications. Expert at developing intuitive frontends and coupling them with robust database architectures, serverless handlers, and third-party APIs. Strong focus on end-to-end software delivery, system performance, and seamless AI integration.}
+
+\section*{\color{primary}\normalsize EXPERIENCE}
+\vspace{-0.8em}
+
+{\small\textbf{Full Stack Software Engineer}}\\[2pt]
+{\small\textbf{\color{primary}Drive to Own} \hfill 2022 -- 2024}
+\begin{itemize}
+    \setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}\small
+    \item Engineered and deployed a cross-platform vehicle-rental and e-hailing mobile app using \textbf{React Native (Expo)}, optimizing start-up times and overall app performance.
+    \item Architected a fault-tolerant geocoding fallback subsystem using AsyncStorage, preserving core location-based order flows during third-party API restrictions or Google Cloud billing locks.
+    \item Developed interactive map tracking features utilizing React Native Maps, autocomplete search, and draggable pin reverse-geocoding to determine shop eligibility and radius matching.
+    \item Integrated secure payment architectures, including Stripe SDK payment sheets and a secure, database-backed custom customer Wallet payment ledger system to support in-app balances.
+\end{itemize}
+
+\vspace{0.5em}
+{\small\textbf{Full Stack AI Solutions Developer}}\\[2pt]
+{\small\textbf{\color{primary}Qflit AI} \hfill 2021 -- 2022 \quad Remote}
+\begin{itemize}
+    \setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}\small
+    \item Architected full-stack AI-driven SaaS chatbot applications using \textbf{Next.js}, Node.js, and Python, enabling dynamic layout customization and custom prompt setups.
+    \item Engineered serverless Twilio WhatsApp and SMS webhooks utilizing Deno Edge Functions, automating vendor dispatch routing and order responses.
+    \item Implemented real-time streaming interfaces (Server-Sent Events / SSE) in React, reducing perceived user latency during large language model (LLM) output generation.
+\end{itemize}
+
+\section*{\color{primary}\normalsize PROJECTS}
+\vspace{-0.8em}
+\begin{itemize}
+    \setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}\small
+    \item \textbf{eshop} -- React Native (Expo) e-commerce system with Supabase backend, Stripe payments, custom customer wallets, and Twilio WhatsApp dispatching. (Live Web Admin)
+    \item \textbf{Qflit AI} -- Full stack AI chatbot builder platform using React, Next.js, and Python to construct custom GPT agents.
+    \item \textbf{Swiftly.Africa} -- E-hailing application with real-time driver tracking and matching.
+    \item \textbf{Briing} -- Peer-to-peer delivery platform featuring map coordinate geocoding and live backend updates.
+    \item \textbf{O Learning} -- AI-powered educational platform with full stack architecture.
+\end{itemize}
+
+\columnbreak
+
+% --- RIGHT COLUMN ---
+\section*{\color{primary}\normalsize CORE EXPERTISE}
+\vspace{-0.8em}
+\noindent
+\skilltag{Mobile Development} \skilltag{AI Integration}\\[4pt]
+\skilltag{System Architecture}\\[4pt]
+\skilltag{User Authentication} \skilltag{API Design}\\[4pt]
+\skilltag{Performance Optimization}
+
+\section*{\color{primary}\normalsize SKILLS}
+\vspace{-0.8em}
+{\small\textbf{\color{primary}Frontend}}\\[4pt]
+\skilltag{React} \skilltag{React Native} \skilltag{Expo} \skilltag{Next.js}\\[3pt]
+\skilltag{HTML5 \& CSS3} \skilltag{Tailwind CSS}
+
+\vspace{0.4em}
+{\small\textbf{\color{primary}Backend \& Database}}\\[4pt]
+\skilltag{Node.js} \skilltag{Python} \skilltag{PostgreSQL}\\[3pt]
+\skilltag{Supabase} \skilltag{Firebase}
+
+\vspace{0.4em}
+{\small\textbf{\color{primary}Cloud, Tools \& APIs}}\\[4pt]
+\skilltag{REST APIs} \skilltag{GraphQL} \skilltag{Stripe SDK}\\[3pt]
+\skilltag{Twilio SDK} \skilltag{Deno Edge Functions} \skilltag{Git}\\[3pt]
+\skilltag{Agile / Scrum}
+
+\section*{\color{primary}\normalsize SOFT SKILLS}
+\vspace{-0.8em}
+\noindent
+\skilltag{Teamwork \& Mentorship}\\[4pt]
+\skilltag{Technical Communication}\\[4pt]
+\skilltag{Analytical Thinking}\\[4pt]
+\skilltag{Agile Project Leadership}
+
+\section*{\color{primary}\normalsize LANGUAGES}
+\vspace{-0.8em}
+{\small
+English (Fluent)\\
+Shona (Native)
+}
+
+\section*{\color{primary}\normalsize EDUCATION}
+\vspace{-0.8em}
+{\small\textbf{Full Stack Developer Certificate}\\[2pt]
+{\color{primary}\textbf{FNB App Academy}}\\[6pt]
+\textbf{Bsc Engineering (Incomplete)}\\[2pt]
+{\color{primary}\textbf{University of Cape Town}}\\[2pt]
+2016 -- 2019}
+
+\end{multicols}
+
+\end{document}
