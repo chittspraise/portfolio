@@ -4,6 +4,7 @@ import eshopIcon from '../assets/ChatGPT Image Jul 4, 2026, 12_19_18 AM.png';
 import briingIcon from '../assets/Voyage avec sourire dans l’aéroport.png';
 import profileHeadshot from '../assets/Screenshot 2026-05-12 225055.png';
 import fnbIcon from '../assets/FNB-App-Academy-2025-image.jpg';
+import briingWebIcon from '../assets/Screenshot 2026-08-07 140316.png';
 
 interface CarouselProps {
   items: DetailItem[];
@@ -26,7 +27,7 @@ export const Carousel: React.FC<CarouselProps> = ({
 
   // Maps item IDs to their corresponding original render cover SVGs or images
   const getCoverIndex = (id: string) => {
-    const originalOrder = ['home', 'eshop', 'eshop-admin', 'briing', 'resume', 'snake'];
+    const originalOrder = ['home', 'eshop', 'eshop-admin', 'briing', 'resume', 'snake', 'briing-website'];
     const idx = originalOrder.indexOf(id);
     return idx !== -1 ? idx : 0;
   };
@@ -133,6 +134,20 @@ export const Carousel: React.FC<CarouselProps> = ({
         <path d="M 75 57 Q 77 53 79 55" stroke="#22c55e" strokeWidth="2" fill="none" />
       </g>
     </svg>,
+
+    // briing-website Cover (Index 6)
+    <img
+      src={briingWebIcon}
+      alt="briing website"
+      key="6"
+      style={{
+        width: '110px',
+        height: '110px',
+        borderRadius: '14px',
+        objectFit: 'cover',
+        display: 'block'
+      }}
+    />,
   ];
 
   return (

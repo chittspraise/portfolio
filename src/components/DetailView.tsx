@@ -13,6 +13,8 @@ import briingSS3 from '../assets/WhatsApp Image 2026-07-31 at 11.48.47.jpeg';
 import briingSS4 from '../assets/WhatsApp Image 2026-07-31 at 11.48.47 (1).jpeg';
 import briingSS5 from '../assets/WhatsApp Image 2026-07-31 at 11.48.48.jpeg';
 import briingSS6 from '../assets/WhatsApp Image 2026-07-31 at 11.48.48 (2).jpeg';
+import briingWebSS1 from '../assets/Screenshot 2026-08-07 140252.png';
+import briingWebSS2 from '../assets/Screenshot 2026-08-07 140355.png';
 import cvPDF from '../assets/PraiseChitumbaCV.pdf';
 
 export interface DetailItem {
@@ -83,6 +85,9 @@ export const DetailView: React.FC<DetailViewProps> = ({
         } else if (activeItem.id === 'briing') {
           onUnlockTrophy('silver');
           triggerTrophyNotification('DISPATCH DISPATCHER', 'Pinger established briing dispatcher sockets.', 'silver');
+        } else if (activeItem.id === 'briing-website') {
+          onUnlockTrophy('bronze');
+          triggerTrophyNotification('WEB EXPLORER', 'Opened the briing web portal landing page.', 'bronze');
         } else if (activeItem.id === 'resume') {
           onUnlockTrophy('gold');
           triggerTrophyNotification('HISTORIAN ELITE', 'Entered the gamified Trophy Room archives.', 'gold');
@@ -182,8 +187,12 @@ export const DetailView: React.FC<DetailViewProps> = ({
         <p className="game-publisher">{activeItem.publisher}</p>
         <h1 className="game-title">{activeItem.title}</h1>
         <p className="game-release-rating">
-          <span className="rating-tag">{activeItem.rating}</span>
-          <span className="meta-bullet">•</span>
+          {activeItem.rating && (
+            <>
+              <span className="rating-tag">{activeItem.rating}</span>
+              <span className="meta-bullet">•</span>
+            </>
+          )}
           <span>{activeItem.subtitle}</span>
           <span className="meta-bullet">•</span>
           <span>Release: {activeItem.releaseDate}</span>
@@ -708,6 +717,63 @@ export const DetailView: React.FC<DetailViewProps> = ({
                           <li>Studied BSc Engineering (Incomplete) at the **University of Cape Town** (2016–2019).</li>
                           <li>Expertise: System Architecture, API Design, Mobile Apps, Real-time Sockets, and Stripe/Twilio SDKs.</li>
                         </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Card 5: briing-website Landing Page */}
+              {activeItem.id === 'briing-website' && (
+                <div className="custom-detail-content briing-web-hub">
+                  <div className="single-column-showcase">
+                    <div className="full-width-gallery" style={{ borderTop: 'none', paddingTop: 0, paddingBottom: '24px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                      <h4 className="gallery-header">💻 WEBSITE PORTAL SCREENSHOTS</h4>
+                      <div className="eshop-screenshots-grid">
+                        <div className="browser-mockup">
+                          <div className="browser-header">
+                            <span className="dot dot-red"></span>
+                            <span className="dot dot-yellow"></span>
+                            <span className="dot dot-green"></span>
+                          </div>
+                          <img src={briingWebSS1} alt="Briing Web Overview" />
+                        </div>
+                        <div className="browser-mockup">
+                          <div className="browser-header">
+                            <span className="dot dot-red"></span>
+                            <span className="dot dot-yellow"></span>
+                            <span className="dot dot-green"></span>
+                          </div>
+                          <img src={briingWebSS2} alt="Briing Web Details" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div style={{ display: "flex", justifyContent: "center", margin: "24px 0 32px" }}>
+                      <a
+                        href="https://bring-three.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="visit-website-btn"
+                        onClick={playSelect}
+                      >
+                        🌐 Visit Website
+                      </a>
+                    </div>
+
+                    <div className="showcase-info full-width-info">
+                      <h3>🌐 briing-website</h3>
+                      <p className="spacious-desc">
+                        Bring is an innovative international shopping and delivery platform that connects shoppers with travelers. Users can purchase products from anywhere in the world, and instead of relying on traditional courier services, they have their orders delivered by verified travelers already heading to the destination. Travelers earn rewards for delivering items along their planned journeys, making international shipping faster, more affordable, and more sustainable. By matching buyers with people who are already traveling, Bring transforms everyday trips into delivery opportunities, creating a trusted marketplace that benefits both shoppers and travelers.
+                      </p>
+
+                      <h4>🛠️ SYSTEM SPECS</h4>
+                      <div className="pill-container spacious-pills">
+                        <span className="pill">Next.js</span>
+                        <span className="pill">React</span>
+                        <span className="pill">TypeScript</span>
+                        <span className="pill">Tailwind CSS</span>
+                        <span className="pill">Vercel</span>
                       </div>
                     </div>
                   </div>

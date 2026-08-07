@@ -13,7 +13,7 @@ const PORTFOLIO_ITEMS: DetailItem[] = [
     subtitle: "System Dashboard Hub",
     publisher: "Praise Labs",
     releaseDate: "07/30/2026",
-    rating: "PS5 Essential",
+    rating: "",
     bgGradient: "radial-gradient(circle at center, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.95) 100%)",
     shortDesc: "Results-driven Full Stack Software Engineer expert at building intuitive web and cross-platform mobile apps. Specializes in robust database design, serverless architectures, performance optimization, and seamless AI integrations.",
     iconText: "Welcome",
@@ -50,6 +50,17 @@ const PORTFOLIO_ITEMS: DetailItem[] = [
     bgGradient: "radial-gradient(circle at center, rgba(22, 78, 99, 0.7) 0%, rgba(8, 47, 73, 0.95) 100%)",
     shortDesc: "Briing is the smart and convenient way to shop for products that are unavailable in your country or cost significantly more when bought locally. Request almost anything and connect with trusted travelers who can bring your items to you.",
     iconText: "Briing",
+  },
+  {
+    id: 'briing-website',
+    title: "briing-website",
+    subtitle: "briing Landing Page",
+    publisher: "Praise Logistics",
+    releaseDate: "03/05/2026",
+    rating: "G (Web)",
+    bgGradient: "radial-gradient(circle at center, rgba(8, 47, 73, 0.7) 0%, rgba(2, 6, 23, 0.95) 100%)",
+    shortDesc: "Bring is an innovative international shopping and delivery platform that connects shoppers with travelers. Users can purchase products from anywhere in the world, and instead of relying on traditional courier services, they have their orders delivered by verified travelers already heading to the destination. Travelers earn rewards for delivering items along their planned journeys, making international shipping faster, more affordable, and more sustainable. By matching buyers with people who are already traveling, Bring transforms everyday trips into delivery opportunities, creating a trusted marketplace that benefits both shoppers and travelers.",
+    iconText: "briing-web",
   },
   {
     id: 'resume',
@@ -132,7 +143,7 @@ function App() {
     if (activeTab === 'profile') {
       return item.id === 'home' || item.id === 'resume';
     } else {
-      return item.id === 'eshop' || item.id === 'eshop-admin' || item.id === 'briing';
+      return item.id === 'eshop' || item.id === 'eshop-admin' || item.id === 'briing' || item.id === 'briing-website';
     }
   });
 
@@ -150,6 +161,8 @@ function App() {
       case 'eshop-admin':
         return "radial-gradient(circle at center, rgba(240, 255, 250, 0.95) 0%, rgba(190, 240, 220, 1) 100%)";
       case 'briing':
+        return "radial-gradient(circle at center, rgba(240, 253, 255, 0.95) 0%, rgba(190, 235, 250, 1) 100%)";
+      case 'briing-website':
         return "radial-gradient(circle at center, rgba(240, 253, 255, 0.95) 0%, rgba(190, 235, 250, 1) 100%)";
       case 'resume':
         return "radial-gradient(circle at center, rgba(255, 253, 240, 0.95) 0%, rgba(245, 225, 180, 1) 100%)";
