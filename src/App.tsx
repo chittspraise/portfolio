@@ -150,13 +150,10 @@ function App() {
   }, [booted, handleBootSystem]);
 
   // Filter items in horizontal list based on active tab
-  const filteredItems = PORTFOLIO_ITEMS.filter((item) => {
-    if (activeTab === 'profile') {
-      return item.id === 'home' || item.id === 'resume';
-    } else {
-      return item.id === 'eshop' || item.id === 'eshop-admin' || item.id === 'briing' || item.id === 'briing-website' || item.id === 'offlineai';
-    }
-  });
+  const PROJECT_ORDER = ['eshop', 'offlineai', 'briing', 'briing-website', 'eshop-admin'];
+  const filteredItems = activeTab === 'profile'
+    ? PORTFOLIO_ITEMS.filter((item) => item.id === 'home' || item.id === 'resume')
+    : PROJECT_ORDER.map((id) => PORTFOLIO_ITEMS.find((item) => item.id === id)).filter((item): item is DetailItem => !!item);
 
   const activeItem = PORTFOLIO_ITEMS.find((item) => item.id === activeId) || PORTFOLIO_ITEMS[0];
 
