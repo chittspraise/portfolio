@@ -5,6 +5,7 @@ import briingIcon from '../assets/Voyage avec sourire dans l’aéroport.png';
 import profileHeadshot from '../assets/Screenshot 2026-05-12 225055.png';
 import fnbIcon from '../assets/FNB-App-Academy-2025-image.jpg';
 import briingWebIcon from '../assets/Screenshot 2026-08-07 140316.png';
+import offlineAIIcon from '../assets/offlineai-1.png';
 
 interface CarouselProps {
   items: DetailItem[];
@@ -27,7 +28,7 @@ export const Carousel: React.FC<CarouselProps> = ({
 
   // Maps item IDs to their corresponding original render cover SVGs or images
   const getCoverIndex = (id: string) => {
-    const originalOrder = ['home', 'eshop', 'eshop-admin', 'briing', 'resume', 'snake', 'briing-website'];
+    const originalOrder = ['home', 'eshop', 'eshop-admin', 'briing', 'resume', 'snake', 'briing-website', 'offlineai'];
     const idx = originalOrder.indexOf(id);
     return idx !== -1 ? idx : 0;
   };
@@ -145,6 +146,21 @@ export const Carousel: React.FC<CarouselProps> = ({
         height: '110px',
         borderRadius: '14px',
         objectFit: 'cover',
+        display: 'block'
+      }}
+    />,
+
+    // OfflineAI Cover (Index 7) - Neon "AI" home screen
+    <img
+      src={offlineAIIcon}
+      alt="OfflineAI"
+      key="7"
+      style={{
+        width: '110px',
+        height: '110px',
+        borderRadius: '14px',
+        objectFit: 'cover',
+        objectPosition: '72% 50%',
         display: 'block'
       }}
     />,

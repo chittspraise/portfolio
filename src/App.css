@@ -2112,6 +2112,10 @@ a.contact-meta-tag:hover {
   color: #475569;
 }
 
+.grid-card p + p {
+  margin-top: 12px;
+}
+
 .ps5-os-root.light-theme .grid-card {
   background: rgba(0, 0, 0, 0.02);
   border: 1px solid rgba(0, 0, 0, 0.05);

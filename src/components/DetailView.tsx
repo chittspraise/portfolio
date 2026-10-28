@@ -15,6 +15,10 @@ import briingSS5 from '../assets/WhatsApp Image 2026-07-31 at 11.48.48.jpeg';
 import briingSS6 from '../assets/WhatsApp Image 2026-07-31 at 11.48.48 (2).jpeg';
 import briingWebSS1 from '../assets/Screenshot 2026-08-07 140252.png';
 import briingWebSS2 from '../assets/Screenshot 2026-08-07 140355.png';
+import offlineAISS1 from '../assets/offlineai-1.png';
+import offlineAISS2 from '../assets/offlineai-2.png';
+import offlineAISS3 from '../assets/offlineai-3.png';
+import offlineAISS4 from '../assets/offlineai-4.png';
 import cvPDF from '../assets/PraiseChitumbaCV.pdf';
 
 export interface DetailItem {
@@ -88,6 +92,9 @@ export const DetailView: React.FC<DetailViewProps> = ({
         } else if (activeItem.id === 'briing-website') {
           onUnlockTrophy('bronze');
           triggerTrophyNotification('WEB EXPLORER', 'Opened the briing web portal landing page.', 'bronze');
+        } else if (activeItem.id === 'offlineai') {
+          onUnlockTrophy('silver');
+          triggerTrophyNotification('OFFLINE OPERATOR', 'Booted the OfflineAI local assistant.', 'silver');
         } else if (activeItem.id === 'resume') {
           onUnlockTrophy('gold');
           triggerTrophyNotification('HISTORIAN ELITE', 'Entered the gamified Trophy Room archives.', 'gold');
@@ -207,6 +214,12 @@ export const DetailView: React.FC<DetailViewProps> = ({
               </svg>
               praizechitts@gmail.com
             </a>
+            <a href="mailto:inbox@llemba.com" className="contact-meta-tag" onClick={playSelect}>
+              <svg viewBox="0 0 24 24" className="contact-icon-svg" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              inbox@llemba.com
+            </a>
             <a href="tel:+27789857143" className="contact-meta-tag" onClick={playSelect}>
               <svg viewBox="0 0 24 24" className="contact-icon-svg" fill="currentColor">
                 <path d="M6.62 10.79c1.44 2.57 3.51 4.71 6.07 6.16l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.59.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.59.12.35.03.74-.24 1.02l-2.2 2.2z" />
@@ -273,7 +286,10 @@ export const DetailView: React.FC<DetailViewProps> = ({
                   <div className="profile-grid">
                     <div className="grid-card">
                       <h4>🚀 PROFILE SUMMATION</h4>
-                      <p>Results-driven Full Stack Software Engineer expert at building intuitive web and cross-platform mobile apps. Specializes in robust database design, serverless architectures, performance optimization, and seamless AI integrations.</p>
+                      <p>I'm a Full Stack Software Engineer who designs, builds and ships complete products end to end, from the database schema to the app in a customer's hand. My work spans cross-platform mobile apps, web platforms, real-time admin tooling and AI systems.</p>
+                      <p>On mobile and web, I build with React Native, Expo, React and Next.js. That includes eshop, a marketplace that dispatches orders to nearby partner shops over WhatsApp, and Briing, a peer-to-peer platform connecting shoppers with travellers, along with its landing site and the eshop-admin live monitoring console.</p>
+                      <p>On the backend, I design PostgreSQL and Supabase data models, serverless Deno edge functions and REST/GraphQL APIs, and integrate services like Stripe payments and Twilio WhatsApp messaging. In AI, I build private, offline assistants such as OfflineAI, running DeepSeek, Llama and nomic-embed locally through Ollama, with RAG for grounded answers and MCP for querying databases.</p>
+                      <p>My work was recognised as a Top 50 App of the Year at the 2025 FNB App Academy Awards.</p>
                     </div>
                     <div className="grid-card">
                       <h4>⚔️ TECH ARSENAL</h4>
@@ -289,6 +305,9 @@ export const DetailView: React.FC<DetailViewProps> = ({
                         <span className="pill aws">Stripe SDK</span>
                         <span className="pill express">Twilio SDK</span>
                         <span className="pill ts">Deno Edge</span>
+                        <span className="pill py">Ollama</span>
+                        <span className="pill node">RAG</span>
+                        <span className="pill redis">MCP</span>
                       </div>
                     </div>
                   </div>
@@ -356,6 +375,15 @@ export const DetailView: React.FC<DetailViewProps> = ({
                         <div className="contact-details">
                           <label>EMAIL TRANSMISSION</label>
                           <a href="mailto:praizechitts@gmail.com" onClick={playSelect}>praizechitts@gmail.com</a>
+                        </div>
+                      </div>
+                      <div className="contact-item-card">
+                        <svg viewBox="0 0 24 24" className="contact-card-icon" fill="currentColor">
+                          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                        <div className="contact-details">
+                          <label>BUSINESS INBOX (LLEMBA)</label>
+                          <a href="mailto:inbox@llemba.com" onClick={playSelect}>inbox@llemba.com</a>
                         </div>
                       </div>
                       <div className="contact-item-card">
@@ -775,6 +803,80 @@ export const DetailView: React.FC<DetailViewProps> = ({
                         <span className="pill">Tailwind CSS</span>
                         <span className="pill">Vercel</span>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Card 6: OfflineAI Local Assistant */}
+              {activeItem.id === 'offlineai' && (
+                <div className="custom-detail-content offlineai-hub">
+                  <div className="single-column-showcase">
+                    <div className="full-width-gallery" style={{ borderTop: 'none', paddingTop: 0, paddingBottom: '24px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                      <h4 className="gallery-header">🤖 OFFLINEAI SCREENSHOTS</h4>
+                      <div className="eshop-screenshots-grid">
+                        <div className="browser-mockup">
+                          <div className="browser-header">
+                            <span className="dot dot-red"></span>
+                            <span className="dot dot-yellow"></span>
+                            <span className="dot dot-green"></span>
+                          </div>
+                          <img src={offlineAISS1} alt="OfflineAI home screen" />
+                        </div>
+                        <div className="browser-mockup">
+                          <div className="browser-header">
+                            <span className="dot dot-red"></span>
+                            <span className="dot dot-yellow"></span>
+                            <span className="dot dot-green"></span>
+                          </div>
+                          <img src={offlineAISS2} alt="OfflineAI MCP mode writing to the database" />
+                        </div>
+                        <div className="browser-mockup">
+                          <div className="browser-header">
+                            <span className="dot dot-red"></span>
+                            <span className="dot dot-yellow"></span>
+                            <span className="dot dot-green"></span>
+                          </div>
+                          <img src={offlineAISS3} alt="OfflineAI solving an equation step by step" />
+                        </div>
+                        <div className="browser-mockup">
+                          <div className="browser-header">
+                            <span className="dot dot-red"></span>
+                            <span className="dot dot-yellow"></span>
+                            <span className="dot dot-green"></span>
+                          </div>
+                          <img src={offlineAISS4} alt="OfflineAI answering a general question" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="showcase-info full-width-info">
+                      <h3>🤖 OfflineAI</h3>
+                      <p className="spacious-desc">
+                        OfflineAI is a private AI assistant built on Next.js that runs entirely on local models served by Ollama, with no internet connection or cloud API required. It combines DeepSeek and Llama for reasoning and language processing, nomic-embed for embeddings, Retrieval-Augmented Generation (RAG) for answers grounded in your own data, and the Model Context Protocol (MCP) to query and update a database from plain-language requests.
+                      </p>
+
+                      <h4>🛠️ SYSTEM SPECS</h4>
+                      <div className="pill-container spacious-pills">
+                        <span className="pill">Next.js</span>
+                        <span className="pill">Ollama</span>
+                        <span className="pill">DeepSeek</span>
+                        <span className="pill">Llama</span>
+                        <span className="pill">nomic-embed</span>
+                        <span className="pill">RAG</span>
+                        <span className="pill">MCP</span>
+                        <span className="pill">Database</span>
+                      </div>
+
+                      <h4>⚙️ HOW IT WORKS</h4>
+                      <ul className="spacious-list">
+                        <li><strong>1. Local Model Runtime:</strong> Ollama hosts every model on the machine, so prompts and data never leave the device.</li>
+                        <li><strong>2. Embedding with nomic-embed:</strong> Documents and incoming questions are converted into vector embeddings using nomic-embed.</li>
+                        <li><strong>3. RAG Retrieval:</strong> The most relevant chunks are retrieved by semantic similarity and injected into the prompt as context.</li>
+                        <li><strong>4. Reasoning with DeepSeek &amp; Llama:</strong> DeepSeek handles step-by-step reasoning such as solving equations, while Llama processes general questions, summaries and text tasks.</li>
+                        <li><strong>5. MCP Database Queries:</strong> In MCP mode, the model extracts structured fields from a request (name, origin, destination, date, budget) and calls MCP tools to query or write to the database.</li>
+                        <li><strong>6. Next.js Interface:</strong> Responses stream back into a Next.js chat UI with switchable Chat and MCP modes.</li>
+                      </ul>
                     </div>
                   </div>
                 </div>

@@ -15,7 +15,7 @@ const PORTFOLIO_ITEMS: DetailItem[] = [
     releaseDate: "07/30/2026",
     rating: "",
     bgGradient: "radial-gradient(circle at center, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.95) 100%)",
-    shortDesc: "Results-driven Full Stack Software Engineer expert at building intuitive web and cross-platform mobile apps. Specializes in robust database design, serverless architectures, performance optimization, and seamless AI integrations.",
+    shortDesc: "Full Stack Software Engineer who takes products from idea to production across mobile, web and AI. I build cross-platform apps in React Native and Next.js, back them with PostgreSQL, Supabase and serverless edge functions, wire in payments and WhatsApp automation, and ship private, local AI systems powered by RAG and MCP.",
     iconText: "Welcome",
   },
   {
@@ -61,6 +61,17 @@ const PORTFOLIO_ITEMS: DetailItem[] = [
     bgGradient: "radial-gradient(circle at center, rgba(8, 47, 73, 0.7) 0%, rgba(2, 6, 23, 0.95) 100%)",
     shortDesc: "Bring is an innovative international shopping and delivery platform that connects shoppers with travelers. Users can purchase products from anywhere in the world, and instead of relying on traditional courier services, they have their orders delivered by verified travelers already heading to the destination. Travelers earn rewards for delivering items along their planned journeys, making international shipping faster, more affordable, and more sustainable. By matching buyers with people who are already traveling, Bring transforms everyday trips into delivery opportunities, creating a trusted marketplace that benefits both shoppers and travelers.",
     iconText: "briing-web",
+  },
+  {
+    id: 'offlineai',
+    title: "OfflineAI",
+    subtitle: "Local AI Assistant with MCP Mode",
+    publisher: "Praise Labs",
+    releaseDate: "10/28/2026",
+    rating: "E (AI)",
+    bgGradient: "radial-gradient(circle at center, rgba(124, 45, 18, 0.7) 0%, rgba(12, 10, 9, 0.95) 100%)",
+    shortDesc: "A fully offline AI assistant built on Next.js, running DeepSeek, Llama and nomic-embed locally through Ollama. It uses RAG to answer from your own data and MCP to query and update a database from plain-language requests.",
+    iconText: "OfflineAI",
   },
   {
     id: 'resume',
@@ -143,7 +154,7 @@ function App() {
     if (activeTab === 'profile') {
       return item.id === 'home' || item.id === 'resume';
     } else {
-      return item.id === 'eshop' || item.id === 'eshop-admin' || item.id === 'briing' || item.id === 'briing-website';
+      return item.id === 'eshop' || item.id === 'eshop-admin' || item.id === 'briing' || item.id === 'briing-website' || item.id === 'offlineai';
     }
   });
 
@@ -164,6 +175,8 @@ function App() {
         return "radial-gradient(circle at center, rgba(240, 253, 255, 0.95) 0%, rgba(190, 235, 250, 1) 100%)";
       case 'briing-website':
         return "radial-gradient(circle at center, rgba(240, 253, 255, 0.95) 0%, rgba(190, 235, 250, 1) 100%)";
+      case 'offlineai':
+        return "radial-gradient(circle at center, rgba(255, 245, 237, 0.95) 0%, rgba(250, 210, 180, 1) 100%)";
       case 'resume':
         return "radial-gradient(circle at center, rgba(255, 253, 240, 0.95) 0%, rgba(245, 225, 180, 1) 100%)";
       default:
