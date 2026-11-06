@@ -74,6 +74,17 @@ const PORTFOLIO_ITEMS: DetailItem[] = [
     iconText: "OfflineAI",
   },
   {
+    id: 'starzauto',
+    title: "Starz Auto",
+    subtitle: "Used Car Dealership Website",
+    publisher: "Starz Auto",
+    releaseDate: "11/06/2026",
+    rating: "G (Web)",
+    bgGradient: "radial-gradient(circle at center, rgba(127, 29, 29, 0.7) 0%, rgba(10, 10, 10, 0.95) 100%)",
+    shortDesc: "Starz Auto is a used car dealership website for browsing hand-picked, inspected vehicles at honest prices. Shoppers can search stock by make, body type and max price, view featured cars with mileage, fuel, transmission and location details, see landed prices delivered to Beitbridge, and get in touch to book a test drive.",
+    iconText: "Starz Auto",
+  },
+  {
     id: 'resume',
     title: "Milestone Archives",
     subtitle: "FNB App Academy Awards Winner",
@@ -150,7 +161,7 @@ function App() {
   }, [booted, handleBootSystem]);
 
   // Filter items in horizontal list based on active tab
-  const PROJECT_ORDER = ['eshop', 'offlineai', 'briing', 'briing-website', 'eshop-admin'];
+  const PROJECT_ORDER = ['eshop', 'offlineai', 'briing', 'briing-website', 'starzauto', 'eshop-admin'];
   const filteredItems = activeTab === 'profile'
     ? PORTFOLIO_ITEMS.filter((item) => item.id === 'home' || item.id === 'resume')
     : PROJECT_ORDER.map((id) => PORTFOLIO_ITEMS.find((item) => item.id === id)).filter((item): item is DetailItem => !!item);
@@ -174,6 +185,8 @@ function App() {
         return "radial-gradient(circle at center, rgba(240, 253, 255, 0.95) 0%, rgba(190, 235, 250, 1) 100%)";
       case 'offlineai':
         return "radial-gradient(circle at center, rgba(255, 245, 237, 0.95) 0%, rgba(250, 210, 180, 1) 100%)";
+      case 'starzauto':
+        return "radial-gradient(circle at center, rgba(255, 241, 241, 0.95) 0%, rgba(250, 200, 200, 1) 100%)";
       case 'resume':
         return "radial-gradient(circle at center, rgba(255, 253, 240, 0.95) 0%, rgba(245, 225, 180, 1) 100%)";
       default:

@@ -6,6 +6,7 @@ import profileHeadshot from '../assets/Screenshot 2026-05-12 225055.png';
 import fnbIcon from '../assets/FNB-App-Academy-2025-image.jpg';
 import briingWebIcon from '../assets/Screenshot 2026-08-07 140316.png';
 import offlineAIIcon from '../assets/offlineai-1.png';
+import starzIcon from '../assets/starzauto-hero.jpg';
 
 interface CarouselProps {
   items: DetailItem[];
@@ -28,7 +29,7 @@ export const Carousel: React.FC<CarouselProps> = ({
 
   // Maps item IDs to their corresponding original render cover SVGs or images
   const getCoverIndex = (id: string) => {
-    const originalOrder = ['home', 'eshop', 'eshop-admin', 'briing', 'resume', 'snake', 'briing-website', 'offlineai'];
+    const originalOrder = ['home', 'eshop', 'eshop-admin', 'briing', 'resume', 'snake', 'briing-website', 'offlineai', 'starzauto'];
     const idx = originalOrder.indexOf(id);
     return idx !== -1 ? idx : 0;
   };
@@ -161,6 +162,21 @@ export const Carousel: React.FC<CarouselProps> = ({
         borderRadius: '14px',
         objectFit: 'cover',
         objectPosition: '72% 50%',
+        display: 'block'
+      }}
+    />,
+
+    // starzauto Cover (Index 8) - crop to the logo on the right of the hero
+    <img
+      src={starzIcon}
+      alt="Starz Auto"
+      key="8"
+      style={{
+        width: '110px',
+        height: '110px',
+        borderRadius: '14px',
+        objectFit: 'cover',
+        objectPosition: '85% 40%',
         display: 'block'
       }}
     />,

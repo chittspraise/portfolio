@@ -19,6 +19,8 @@ import offlineAISS1 from '../assets/offlineai-1.png';
 import offlineAISS2 from '../assets/offlineai-2.png';
 import offlineAISS3 from '../assets/offlineai-3.png';
 import offlineAISS4 from '../assets/offlineai-4.png';
+import starzSS1 from '../assets/starzauto-hero.jpg';
+import starzSS2 from '../assets/starzauto-featured.jpg';
 import cvPDF from '../assets/PraiseChitumbaCV.pdf';
 
 export interface DetailItem {
@@ -95,6 +97,9 @@ export const DetailView: React.FC<DetailViewProps> = ({
         } else if (activeItem.id === 'offlineai') {
           onUnlockTrophy('silver');
           triggerTrophyNotification('OFFLINE OPERATOR', 'Booted the OfflineAI local assistant.', 'silver');
+        } else if (activeItem.id === 'starzauto') {
+          onUnlockTrophy('bronze');
+          triggerTrophyNotification('SHOWROOM VISITOR', 'Opened the Starz Auto dealership website.', 'bronze');
         } else if (activeItem.id === 'resume') {
           onUnlockTrophy('gold');
           triggerTrophyNotification('HISTORIAN ELITE', 'Entered the gamified Trophy Room archives.', 'gold');
@@ -877,6 +882,63 @@ export const DetailView: React.FC<DetailViewProps> = ({
                         <li><strong>5. MCP Database Queries:</strong> In MCP mode, the model extracts structured fields from a request (name, origin, destination, date, budget) and calls MCP tools to query or write to the database.</li>
                         <li><strong>6. Next.js Interface:</strong> Responses stream back into a Next.js chat UI with switchable Chat and MCP modes.</li>
                       </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Card 7: Starz Auto Car Dealership */}
+              {activeItem.id === 'starzauto' && (
+                <div className="custom-detail-content briing-web-hub">
+                  <div className="single-column-showcase">
+                    <div className="full-width-gallery" style={{ borderTop: 'none', paddingTop: 0, paddingBottom: '24px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                      <h4 className="gallery-header">💻 WEBSITE SCREENSHOTS</h4>
+                      <div className="eshop-screenshots-grid">
+                        <div className="browser-mockup">
+                          <div className="browser-header">
+                            <span className="dot dot-red"></span>
+                            <span className="dot dot-yellow"></span>
+                            <span className="dot dot-green"></span>
+                          </div>
+                          <img src={starzSS1} alt="Starz Auto homepage hero and search" />
+                        </div>
+                        <div className="browser-mockup">
+                          <div className="browser-header">
+                            <span className="dot dot-red"></span>
+                            <span className="dot dot-yellow"></span>
+                            <span className="dot dot-green"></span>
+                          </div>
+                          <img src={starzSS2} alt="Starz Auto featured cars listing" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div style={{ display: "flex", justifyContent: "center", margin: "24px 0 32px" }}>
+                      <a
+                        href="https://starzauto-teal.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="visit-website-btn"
+                        onClick={playSelect}
+                      >
+                        🌐 Visit Website
+                      </a>
+                    </div>
+
+                    <div className="showcase-info full-width-info">
+                      <h3>🚗 Starz Auto</h3>
+                      <p className="spacious-desc">
+                        Starz Auto is a used car dealership website for browsing hand-picked, inspected vehicles at honest prices. Shoppers can filter stock by make, body type and maximum price, browse featured cars with mileage, fuel type, transmission, engine size and location at a glance, and see landed prices delivered to Beitbridge, inclusive of port clearance, inspection and delivery. Each listing links to a full car detail page, and customers can get in touch to book a test drive.
+                      </p>
+
+                      <h4>🛠️ SYSTEM SPECS</h4>
+                      <div className="pill-container spacious-pills">
+                        <span className="pill">Next.js</span>
+                        <span className="pill">React</span>
+                        <span className="pill">TypeScript</span>
+                        <span className="pill">Tailwind CSS</span>
+                        <span className="pill">Vercel</span>
+                      </div>
                     </div>
                   </div>
                 </div>
